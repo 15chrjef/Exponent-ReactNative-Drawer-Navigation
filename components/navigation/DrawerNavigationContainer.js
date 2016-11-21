@@ -5,36 +5,30 @@ import {
   Text,
   Image,
 } from 'react-native';
-
 import {
   StackNavigation,
   DrawerNavigation,
   DrawerNavigationItem,
 } from '@exponent/ex-navigation';
-
-import ResponsiveImage from 'react-native-responsive-image';
-
 import { Ionicons } from '@exponent/vector-icons';
-
-
 import Router from '../../navigation/Router';
 
 
 export default class DrawerNavigationContainer extends Component {
 
-  _getColor = (isSelected) => {
+  _getColor(isSelected){
       return isSelected ? '#fff' : '#000'
   };
 
-  _renderHeader = () => {
+  _renderHeader(){
     return (
       <View style={styles.header}>
-        <ResponsiveImage source={{uri: 'https://pbs.twimg.com/profile_images/727675773335666689/FLrIEeNN.jpg'}} style={styles.headerImage} initWidth="321" initHeight="161" />
+      <Text>Drawer Header</Text>
       </View>
     );
   };
 
-  _renderTitle = (text, isSelected) => {
+  _renderTitle(text, isSelected){
     return (
       <Text style={[styles.buttonTitleText, isSelected ? styles.selectedText : styles.non_SelectedText]}>
         {text}
@@ -42,7 +36,7 @@ export default class DrawerNavigationContainer extends Component {
     );
   };
 
-  _renderIcon = (name, isSelected, color) => {
+  _renderIcon(name, isSelected, color){
     let extraStyle = {marginTop: 2, color};
     if (name === 'md-alert') {
       extraStyle = {...extraStyle, marginLeft: -3, color};
@@ -82,7 +76,7 @@ export default class DrawerNavigationContainer extends Component {
             />
         </DrawerNavigationItem>
         <DrawerNavigationItem
-          id="about"
+          id="about"  
           selectedStyle={styles.selectedItemStyle}
           renderTitle={isSelected => this._renderTitle('About', isSelected)}
           renderIcon={isSelected => this._renderIcon('ios-alert', isSelected, this._getColor(isSelected))}>

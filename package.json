@@ -1,9 +1,9 @@
 {
-  "name": "exponent-drawer-navigation-demo",
+  "name": "exponent-react-native-drawer-navigation",
   "version": "0.0.0",
-  "description": "Hello Exponent!",
-  "author": "Kelvin Jones",
-  "private": true,
+  "description": "Basic Exponent/React Native Drawer",
+  "author": "Jeff Christian",
+  "private": false,
   "main": "main.js",
   "dependencies": {
     "@exponent/ex-navigation": "^1.7.0-rc-4",

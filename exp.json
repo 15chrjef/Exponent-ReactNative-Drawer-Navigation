@@ -1,7 +1,7 @@
 {
-  "name": "exponent-drawer-navigation-demo",
+  "name": "exponent-react-native-drawer-navigation",
   "description": "An empty new project",
-  "slug": "exponent-drawer-navigation-demo",
+  "slug": "exponent-react-native-drawer-navigation",
   "sdkVersion": "10.0.0",
   "version": "1.0.0",
   "orientation": "portrait",
