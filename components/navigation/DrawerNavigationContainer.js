@@ -12,10 +12,8 @@ import {
 } from '@exponent/ex-navigation';
 import { Ionicons } from '@exponent/vector-icons';
 import Router from '../../navigation/Router';
-
-
+import Header from './DrawerHeader'
 export default class DrawerNavigationContainer extends Component {
-
   _getColor(isSelected){
       return isSelected ? '#fff' : '#000'
   };
@@ -23,7 +21,7 @@ export default class DrawerNavigationContainer extends Component {
   _renderHeader(){
     return (
       <View style={styles.header}>
-      <Text>Drawer Header</Text>
+        <Text>Drawer Header</Text>
       </View>
     );
   };
@@ -63,32 +61,51 @@ export default class DrawerNavigationContainer extends Component {
           id="home"
           selectedStyle={styles.selectedItemStyle}
           renderTitle={isSelected => this._renderTitle('Home', isSelected)}
-          renderIcon={isSelected => this._renderIcon('ios-home', isSelected, this._getColor(isSelected))}>
+          renderIcon={isSelected => this._renderIcon('ios-home', isSelected, this._getColor(isSelected))}
+          >
           <StackNavigation
-              id="home-stack"
-              defaultRouteConfig={{
-                navigationBar: {
-                  backgroundColor: '#D74D56',
-                  tintColor: '#fff',
-                },
-              }}
-              initialRoute={Router.getRoute('home')}
+            id="home-stack"
+            defaultRouteConfig={{
+              navigationBar: {
+                backgroundColor: '#D74D56',
+                tintColor: '#fff',
+              },
+            }}
+            initialRoute={Router.getRoute('home')}
+            />
+        </DrawerNavigationItem>
+        <DrawerNavigationItem
+          id="profile"
+          selectedStyle={styles.selectedItemStyle}
+          renderTitle={isSelected => this._renderTitle('Profile', isSelected)}
+          renderIcon={isSelected => this._renderIcon('ios-body', isSelected, this._getColor(isSelected))}
+          >
+          <StackNavigation
+            id="profile-stack"
+            defaultRouteConfig={{
+              navigationBar: {
+                backgroundColor: '#D74D56',
+                tintColor: '#fff',
+              },
+            }}
+            initialRoute={Router.getRoute('profile')}
             />
         </DrawerNavigationItem>
         <DrawerNavigationItem
           id="about"  
           selectedStyle={styles.selectedItemStyle}
           renderTitle={isSelected => this._renderTitle('About', isSelected)}
-          renderIcon={isSelected => this._renderIcon('ios-alert', isSelected, this._getColor(isSelected))}>
+          renderIcon={isSelected => this._renderIcon('ios-subway-outline', isSelected, this._getColor(isSelected))}
+          >
           <StackNavigation
-              id="about-stack"
-              defaultRouteConfig={{
-                navigationBar: {
-                  backgroundColor: '#D74D56',
-                  tintColor: '#fff',
-                },
-              }}
-              initialRoute={Router.getRoute('about')}
+            id="about-stack"
+            defaultRouteConfig={{
+              navigationBar: {
+                backgroundColor: '#D74D56',
+                tintColor: '#fff',
+              },
+            }}
+            initialRoute={Router.getRoute('about')}
             />
         </DrawerNavigationItem>
       </DrawerNavigation>
