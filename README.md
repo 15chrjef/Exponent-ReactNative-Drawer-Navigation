@@ -6,6 +6,7 @@ TO START:
 1)Download Exponent
 2)Download Xcode(optional)
 3)Open folder with Exponent
+  -npm install --save @exponent/ex-navigation react-native react
 4)View project with either device simulator or with real device via exponent
 
 
